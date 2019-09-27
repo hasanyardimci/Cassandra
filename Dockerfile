@@ -1,3 +1,4 @@
 FROM cassandra
 USER root
-RUN src/cassandra-Snode.sh
+COPY src/cassandra-Snode.sh /usr/bin/
+RUN /usr/bin/cassandra-Snode.sh
